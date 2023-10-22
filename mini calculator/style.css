@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-image: url(images/bg_image3.jpeg);
+}
+.container{
+    height: 400px;
+    width: 300px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    padding: 5px 5px;
+    border-radius: 10%;
+    overflow: hidden;
+}
+.calculator{
+    height: 390px;
+    width: 290px;
+    z-index: 4;
+    position: absolute;
+    background-color: rgb(44, 134, 104);
+    border-radius: 10%;
+    background-image: url(images/bg_image3.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#inputbox{
+    width: 80%;
+    height: 50px;
+    margin-left: 7.5%;
+    margin-top: 5%;
+    padding: 5px;
+    color: #000;
+    font-size: 1.5em;
+    display: flex;
+    border:none;
+    outline: none;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+#inputbox{
+    text-align: right;
+}
+::placeholder{
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+.button{
+    justify-content: space-around;
+    width: 20% ;
+    margin-top: 7%;
+    margin-left: 3%;
+    padding: 5px;
+    border: none;
+    font-size: 1.3em;
+    border-radius: 50%;
+    border: solid 2px #fff;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+   
+}
+#operator{
+    background-color: black;
+    color: #6ec20f;
+    cursor: pointer;
+
+}
+#equal{
+    background-color: orange;
+    color: #fff;
+}
+
+
+.container::before{
+    content: "";
+    position: absolute;
+    height: 40%;
+    width: 200%;
+    left: -50%;
+    top: 20%;
+    background:rgb(255, 10, 10);
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+
+
+}
+
+.container::after{
+    content: "";
+    position: absolute;
+    height: 150%;
+    width: 50%;
+    left: 30%;
+    top: -20%;
+    background:rgb(20, 199, 32);
+    animation: rotate 4s linear infinite;
+
+}
+
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
